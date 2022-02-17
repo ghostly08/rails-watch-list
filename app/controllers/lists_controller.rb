@@ -14,7 +14,7 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    # we need `restaurant_id` to associate review with corresponding restaurant
+
 
     if @list.save
       redirect_to list_path(@list)
