@@ -1,7 +1,7 @@
 <h2><%= @list.name %></h2>
 <ul>
 <% @list.bookmarks.each do |bookmark| %>
-  <li>
+  <li class="card-body">
   <h1><%= bookmark.movie.title %></h1>
   <p><%= link_to 'Delete', bookmark_path(bookmark), method: :delete %></p>
   </li>
