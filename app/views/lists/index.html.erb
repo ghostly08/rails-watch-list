@@ -1,22 +1,13 @@
 <div class="banner">
-
-
   <h1>Your listing Movies Repository</h1>
-
 </div>
 
 <div class="btn-container">
-<div class="row justify-content-left">
-  <div class="col-3">
-    <button type="button" class="btn btn-primary btn-sm">
-      <%= link_to 'New List', new_list_path %>
-    </button>
-  </div>
+  <h5>My Lists</h5>
+  <button type="button" class="btn btn-success btn-sm">
+    <%= link_to 'Create a New List', new_list_path %>
+  </button>
 </div>
-</div>
-
-
-
 
 <div class="cards-container">
   <% @lists.each do |list| %>
