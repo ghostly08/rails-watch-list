@@ -1,26 +1,17 @@
+<div class="show-banner">
 <h2><%= @list.name %></h2>
-<ul>
-<% @list.bookmarks.each do |bookmark| %>
-  <li class="card-body">
-  <h1><%= bookmark.movie.title %></h1>
-  <p><%= link_to 'Delete', bookmark_path(bookmark), method: :delete %></p>
-  </li>
-<% end %>
-</ul>
-<%= link_to 'Go back', lists_path %> |
-<%= link_to 'Add movie', new_list_bookmark_path(@list) %> |<%# (@list) because we need an specif Id - see on show action.%>
-<p><%= link_to 'Delete List', list_path, method: :delete %></p>
-
+</div>
 <div class="cards-container">
-  <% @lists.each do |list| %>
+  <% @list.bookmarks.each do |bookmark| %>
     <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1459&q=80" alt="cinema image">
-          <h5 class="card-title">
-            <%= link_to list.name, list_path(list) %>
-          </h5>
-          <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          </p>
+      <img src="<%= bookmark.movie.poster_url %>" alt="">
+        <h5><%= bookmark.movie.title %></h5>
+          <p><%= "⭐" * bookmark.movie.rating %></p>
+          <p><%= bookmark.movie.overview %></p>
+          <p><%= link_to 'Delete', bookmark_path(bookmark), method: :delete %></p>
     </div>
   <% end %>
 </div>
+<%= link_to 'Go back', lists_path %> |
+<%= link_to 'Add movie', new_list_bookmark_path(@list) %> |<%# (@list) because we need an specif Id - see on show action.%>
+<p><%= link_to 'Delete List', list_path, method: :delete %></p>

@@ -12,6 +12,7 @@
 <div class="cards-container">
   <% @lists.each do |list| %>
     <div class="card-list">
+    <img src="<%= list.image_url %>" alt="">
       <h5 class="card-title">
         <%= link_to list.name, list_path(list) %>
       </h5>
