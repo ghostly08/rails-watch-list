@@ -34,18 +34,22 @@
   }
 
   h5 {
-    padding-top: 10px;
-    padding-left: 10px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
   }
 
   p {
-    padding-left: 10px;
+    padding: 0 10px;
   }
 
   a {
+    justify-content: flex-end;
     color: rgb(242, 52, 52);
     font-weight: bolder;
     padding-left: 10px;
-    justify-content: flex-end;
+    margin: 50px 0;
   }
+
 }
