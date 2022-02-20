@@ -1,3 +1,9 @@
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 
 .cards-container {
   width: 70%;
@@ -25,5 +31,21 @@
 
   &:hover {
     opacity: .9;
+  }
+
+  h5 {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  p {
+    padding-left: 10px;
+  }
+
+  a {
+    color: rgb(242, 52, 52);
+    font-weight: bolder;
+    padding-left: 10px;
+    justify-content: flex-end;
   }
 }
