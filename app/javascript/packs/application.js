@@ -14,3 +14,21 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "controllers"
+import { library } from "webpack";
+
+
+const results = document.querySelector('#results');
+
+fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9e2677275f583e220b7138a1f1be7e3e&language=en-US&page=1")
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data)
+    // data.Search.forEach((result) => {
+    //   const movieTag = `<li class="list-inline-item">
+    //   <img src="${result.Poster}" alt"">
+    //   <p>${result.Title}</p>
+    //   </li>`
+    //   results.insertAdjacentHTML("beforeend", movieTag)
+    // })
+
+  })

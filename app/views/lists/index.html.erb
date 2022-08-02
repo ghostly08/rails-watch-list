@@ -9,12 +9,15 @@
   </button>
 </div>
 
+
+<ul id="results"></ul>
+
+
 <div class="cards-container">
   <% @lists.each do |list| %>
     <div class="card-list">
       <h5 class="card-title">
         <%= link_to list.name, list_path(list) %>
-    
       </h5>
     </div>
   <% end %>
