@@ -9,6 +9,7 @@
     "@rails/webpacker": "5.4.3",
     "bootstrap": "^5.2.0",
     "jquery": "^3.6.0",
+    "module": "^1.2.5",
     "select2": "^4.1.0-rc.0",
     "stimulus": "^3.0.1",
     "turbolinks": "^5.2.0",
@@ -17,6 +18,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "babel-install": "2.1.0",
     "webpack-dev-server": "^3"
   }
 }
